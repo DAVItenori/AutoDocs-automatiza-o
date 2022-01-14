@@ -2,6 +2,7 @@
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
     "html-pdf": "^3.0.1",
     "jspdf": "^2.5.0"
   }
