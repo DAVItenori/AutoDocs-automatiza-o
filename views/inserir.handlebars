@@ -1,0 +1,188 @@
+<header>
+    <div class = "Caixa">
+        <img id= "Banner" src=""> 
+            <h1>AutoDocs - Automatize a criação de documentos jurídicos</h1>
+</div>
+    <nav class = "menu">
+    <ul>
+        <li id = "Home"><a href="index.html">Home<a></li>
+        <li><a href ="http://localhost:8081/cad">Documentos</a></li>
+        <li><a href = "">Contato</a></li>
+        <li><a href ="">Quem Somos</a></li>
+    </ul>
+    </nav>
+</header>
+<form name='form1' action="/add" method="get">
+                <h2>Tipo de documento: "Procuração Jurídica: Petição Inicial" </h2>
+
+                    <div class = "Parte">
+                    <label for = "nVara">Número da Vara:</label>
+                    <input type ="text" name ="nVara" id ="nVara" class ="input-padrao"  placeholder="Numero da vara">
+
+                    <label for = "comarca">Comarca:</label>
+                    <input type ="number" name ="comarca" id ="comarca" class ="input-padrao"  placeholder="Comarca">
+
+                    <label for = "nomeparte">Nome da parte:</label>
+                    <input type ="text" name ="nomeparte" id ="nomeparte" class ="input-padrao"  placeholder="Nome da Parte">
+
+                    <label for = "nacionalidade">Nacionalidade da parte: </label>
+                    <input type ="text" name ="nacionalidade" id ="nacionalidade" class ="input-padrao"  placeholder="Nacionalidade">
+
+                    <label for = "estadocivil">Estado Civil da parte: </label>
+                    <input type ="text" name ="estadocivil" id ="estadocivil" class ="input-padrao"  placeholder="Estado Civil">
+
+                    <label for = "profissao">Profissão da Parte: </label>
+                    <input type ="text" name ="profissao" id ="profissao" class ="input-padrao"  placeholder="Profissão">
+
+                    <label for = "rg">RG: </label>
+                    <input type ="text" name ="rg" id ="rg" class ="input-padrao" placeholder="RG">
+
+                    <label for = "orgaoexpedidor">Orgão expedidor: </label>
+                    <input type ="text" name ="orgaoexpedidor" id ="orgaoexpedidor" class ="input-padrao" placeholder="Orgão expedidor: ">
+
+                    <label for = "CPF">CPF: </label>
+                    <input type = "number" name = "cpf" id ="cpf" class="input-padrao"  placeholder="000.000.000-xx">
+
+                    <label for = "e-mail">E-Mail: </label>
+                    <input type = "text" name = "email" id ="e-mail" class="input-padrao" placeholder="xxx@yyy.com.br">
+
+                    <label for = "endereco">Endereço: </label>
+                    <input type = "text" name = "endereco "id ="endereco" class="input-padrao"  placeholder="Rua.Aven...">
+
+                    <label for = "enderecoadvogado">Endereço comercial do Advogado da parte: </label>
+                    <input type = "text" name = "enderecoadvogado" id ="enderecoadvogado" class="input-padrao"  placeholder="Rua.Aven...">
+                    
+                    <label for = "acao">Descreva a Ação: </label>
+                    <input type ="text" name = "acao" id = "acao" class="input-padrao" placeholder="Descreva a ação contra o réu. "> 
+                   
+                    </div>
+
+                    <div class = "reu">
+
+                    <label for = "nomereu">Nome do Réu:</label>
+                    <input type ="text" name ="nomereu" id ="nomereu" class ="input-padrao"  placeholder="Nome do Reu">
+
+                    <label for = "nacionalidadereu">Nacionalidade do Réu: </label>
+                    <input type ="text" name ="nacionalidadereu" id ="nacionalidadereu" class ="input-padrao" placeholder="Nacionalidade do réu">
+
+                    <label for = "estadocivilreu">Estado Civil do Réu: </label>
+                    <input type ="text" name ="estadocivilreu" id ="estadocivilreu" class ="input-padrao"  placeholder="Estado Civil do reu">
+
+                    <label for = "profissaoreu">Profissão do Réu: </label>
+                    <input type ="text" name ="profissaoreu" id ="profissaoreu" class ="input-padrao"  placeholder="Profissão do Réu: ">
+
+                    <label for = "rgreu">RG: </label>
+                    <input type ="text" name ="rgreu" id ="rgreu" class ="input-padrao" placeholder="RG do réu">
+
+                    <label for = "orgaoexpedidorreu">Orgão expedidor: </label>
+                    <input type ="text" name ="orgaoexpedidorreu" id ="orgaoexpedidorreu" class ="input-padrao" placeholder="Orgão expedidor do réu: ">
+
+                    <label for = "CPFreu">CPF: </label>
+                    <input type = "number" name = "cpfreu" id ="cpfreu" class="input-padrao" placeholder="000.000.000-xx">
+
+                    <label for = "e-mailreu">E-Mail: </label>
+                    <input type = "text" name = "emailreu" id ="emailreu" class="input-padrao" placeholder="xxx@yyy.com.br">
+
+                    <label for = "enderecoreu">Endereço: </label>
+                    <input type = "text" name = "enderecoreu"id ="enderecoreu" class="input-padrao" placeholder="Rua.Aven...">
+                        
+                    <label for = "relato">Relato: </label>
+                    <input type = "text" name = "relato" id ="relato" class="input-padrao" placeholder="Relato da ação: ">
+
+                    <label for = "fundamentos">Fundamentos: </label>
+                    <input type = "text" name = "fundamentos" id ="fundamentos" class="input-padrao"  placeholder="Fundamentos da ação: ">
+
+                    <label for = "provas">Provas: </label>
+                    <input type = "text" name = "provas" id ="provas" class="input-padrao" placeholder="Provas : ">
+
+                    <label for = "valor">Valor da ação: </label>
+                    <input type = "number" name = "valor" id ="valor" class="input-padrao" placeholder="Valor da ação: ">
+
+                    <label for = "local">Local: </label>
+                    <input type = "text" name = "local" id ="local" class="input-padrao" placeholder="Local:">
+
+                    <label for = "dia"> Dia: </label>
+                    <input type = "number" name = "dia" id ="dia" class="input-padrao" placeholder="Dia: ">
+
+                    <label for = "mes">Mês: </label>
+                    <input type = "text" name = "mes" id ="mes" class="input-padrao" placeholder="Mês: ">
+
+                    <label for = "ano:">Ano: </label>
+                    <input type = "number" name = "ano" id ="ano" class="input-padrao" placeholder="Ano: ">
+
+                    <label for = "advogado">Nome do Advogado: </label>
+                    <input type = "text" name = "advogado" id ="advogado" class="input-padrao" placeholder="Nome do advogado: ">
+
+                    <label for = "oab">OAB: </label>
+                    <input type = "number" name = "oab" id ="oab" class="input-padrao"  placeholder="N° OAB ">
+
+                    <label for = "uf">UF OAB: </label>
+                    <input type = "text" name = "uf" id ="uf" class="input-padrao"  placeholder="UF OAB "> 
+                        
+
+                    <input type="submit" id="send" value="Gerar documento PDF" class = "Enviar"> 
+                    
+        </form>
+
+<div id = "modelopeticao">
+    <h1> MODELO DE PETIÇÃO INICIAL </h1> 
+    <p>EXMO. SR. JUIZ. DE DIREITO DA. <i id="campovara"></i> DA COMARCA DE <i id="campocomarca"></i></p>
+    </div> 
+    {{!-- <p></p>  
+    <p></p> 
+    <p></p> 
+    <p></p> 
+    <p></p> 
+    <p></p> 
+    <p></p> 
+    <p></p> 
+    <p></p> 
+    <p></p> 
+    <p><i id="camponome"></i>, <i id="camponacionalidade">, <i id="camponacionalidade"></i>, <i id="campoestadocivil"></i>, <i id="campoprofissao"></i>,portador da carteira de identidade de numero <i id="camporg"> </i>expedida pelo <i id="campoexpedicao"></i>, 
+        inscrita no CPF/MF sob n°: <i id="campocpf"></i>, endereço eletrônico: <i id="campoemail"></i>,residente e domiciliado na <i id="campoendereco"></i>, 
+        por seu advogado abaixo subscrito, com endereço profissional <i id="campoenderecoadvogado"></i>, 
+        para fins do artigo 106, I do Novo Código de Processo Civil, vem a este juízo propor a presente </p>
+    <p></p>
+    <p>AÇÃO <i id="campoacao"></i></p>
+    <p></p>
+    <p>pelo rito comum, em face de<i id="camponomereu"></i>, <i id="camponacionalidadereu"></i>, <i id="campoestadocivilreu"></i>, 
+        <i id="campoprofissaoreu"></i>, portador da carteira de identidade n° <i id="camporgreu"></i>,expedida pelo <i id="campoexpedicaoreu"></i>, inscrita no CPF/MF sob <i id="campocpfreu"></i> , endereço eletrônico <i id="campoemailreu"></i> , 
+        residente e domiciliado <i id="campoenderecoreu"></i>, pelas razões de fato e de direito que passa a expor:</p>
+    <p></p>
+    <p></p>
+    <p>DOS FATOS</p>
+    <p><i id="camporelatoreu"></i></p>
+    <p></p>
+    <p></p>
+    <p>DOS FUNDAMENTOS</p>
+    <p></p>
+    <p><i id="campofundamentos"></i></p>
+    <p></p>
+    <p></p>
+    <p>DO PEDIDO</p>
+    <p>diante do exposto requerer a V.Excelência: </p>
+    <p></p>
+    <p>1 – Que seja designada audiência de conciliação ou mediação na forma do previsto no artigo
+    334 do NCPC;</p>
+    <p>2 – A citação do Réu para oferecer resposta no prazo legal sob pena de preclusão, revelia e
+    confissão.</p>
+    <p>3 – que seja julgado procedente o pedido para ……….</p>
+    <p>4 – que seja julgado procedente o pedido para condenar o réu ao pagamento das custas
+    judiciais e honorários advocatícios na ordem de 20% sobre o valor da causa.</p>
+    <p></p>
+    <p></p>
+    <p>DAS PROVAS</p>
+    <p><i id="campoprovas"></i></p>
+    <p></p>
+    <p></p>
+    <p>DO VALOR DA CAUSA</p>
+    <p></p>
+    <p></p>
+    <p>Dá se a causa o valor de R$ <i id="campovalor"></i></p>
+    <p>Nesses termos,</p>
+    <p></p>
+    <p>Pede deferimento</p>
+    <p><i id="campolocal"></i>, <i id="campodia"></i>de <i id="campomes"></i> de <i id="campovano"></i></p>
+    <p></p>
+    <hr></hr>
+    <p><i id="camponomeadvogado"></i>, OAB <i id="campooab"></i>, UF <i id="campouf"></i></p> --}}

@@ -1,42 +1,17 @@
-const { default: jsPDF } = require("jspdf");
-
- const btn = document.querySelector("#send");
-
- btn.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    const vara = document.getElementById("nVara");
-
-    const comarca = document.getElementById("comarca").value;
-
-    const nomeparte = document.getElementById("nomeparte").value;
-
-    const nacionalidade = document.getElementById("nacionalidade").value
-
-    // const comarca = document.getElementById("comarca").value
-
-    // const comarca = document.getElementById("comarca").value
-    
-    // const comarca = document.getElementById("comarca").value
-
-    // const comarca = document.getElementById("comarca").value
-
-    // const comarca = document.getElementById("comarca").value
-
-    // const comarca = document.getElementById("comarca").value
-
-    // const comarca = document.getElementById("comarca").value
-
-    // const comarca = document.getElementById("comarca").value
-
-var pdf = require("html-pdf");
-
-  var conteudo = `
-  <h1> MODELO DE PETIÇÃO INICIAL </h1> 
-    <hr></hr>
-    <p>EXMO. SR. JUIZ. DE DIREITO DA.${vara} DA COMARCA DE ${comarca}</p>
-    <p></p>  
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="public/js/javascript.js"> </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1> MODELO DE PETIÇÃO INICIAL </h1> 
+    <p>EXMO. SR. JUIZ. DE DIREITO DA. <i id="campovara"> <%= vara% > </i> DA COMARCA DE <i id="campocomarca"> <%= vara% > </i></p>
+     -->
+    <!-- <p></p> 
     <p></p> 
     <p></p> 
     <p></p> 
@@ -44,9 +19,7 @@ var pdf = require("html-pdf");
     <p></p> 
     <p></p> 
     <p></p> 
-    <p></p> 
-    <p></p> 
-    <p>${NomeParte}, ${nacionalidade}, ${estadocivil}, ${profissão},portador da carteira de identidade de numero ${rg} expedida pelo ${exRG}, 
+    <p>${{NomeParte}}, ${{nacionalidade}}, ${estadocivil}, ${profissão},portador da carteira de identidade de numero ${rg} expedida pelo ${exRG}, 
         inscrita no CPF/MF sob n°: ${cpf}, endereço eletrônico:  ${email},residente e domiciliado ${endereco}, 
         por seu advogado abaixo subscrito, com endereço profissional ${enderecoadvogado}, 
         para fins do artigo 106, I do Novo Código de Processo Civil, vem a este juízo propor a presente  </p>
@@ -93,22 +66,7 @@ judiciais e honorários advocatícios na ordem de 20% sobre o valor da causa.</p
     <p>${local}, ${dia} de ${mes} de ${ano}</p>
     <p></p>
     <hr></hr>
-    <p>${nomeadvogado}, OAB ${oab}, UF ${uf}</p>`
-
+    <p>${nomeadvogado}, OAB ${oab}, UF ${uf}</p>  -->
     
-pdf.create(conteudo,{}).toFile("./PDFTESTE.pdf",(err,res) => {
-    if(err){
-        console.log("UM ERRO ACONTECEU! ")
-    } 
-    else 
-    {
-        console.log(res);
-    }
-})
-
- });
- 
-
-
-
- 
+<!-- </body>
+</html> -->

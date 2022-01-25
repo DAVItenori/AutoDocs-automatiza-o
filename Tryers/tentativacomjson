@@ -1,0 +1,69 @@
+let Vara =  req.body.nVara; 
+        let Comarca = req.body.comarca; 
+        let NomeParte = req.body.nomeparte;
+        let EstadoCivil = req.body.estadocivil;
+        let Nacionalidade = req.body.nacionalidade;
+        let Profissao = req.body.profissao;
+        let Rg = req.body.rg;  
+        let OExp = req.body.orgaoexpedidor; 
+        let Cpf = req.body.cpf;
+        let Email = req.body.email;
+        let Endereco = req.body.endereco;
+        let EndAdv = req.body.enderecoadvogado; 
+        let Acao = req.body.acao;  
+                
+        let  NomeReu= req.body.nomereu;
+        let NacReu= req.body.nacionalidadereu; 
+        let  EstReu= req.body.estadocivilreu;
+        let  ProReu= req.body.profissaoreu;
+        let  RgReu= req.body.rgreu; 
+        let  OExpReu= req.body.orgaoexpedidorreu; 
+        let  CpfReu= req.body.cpfreu;
+        let  EmailReu= req.body.emailreu;
+        let  EndReu= req.body.enderecoreu;
+        let  Relato= req.body.relato; 
+        let  Fundamentos= req.body.fundamentos;
+        let  Provas= req.body.provas; 
+        let  Valor= req.body.valor;
+        let  Local= req.body.local;
+        let  Dia= req.body.dia; 
+        let  Mes= req.body.mes;
+        let  Ano= req.body.ano; 
+        let  Advogado= req.body.advogado; 
+        let  Oab= req.body.oab; 
+        let  Uf= req.body.uf;
+             
+        let dados = {'Vara':Vara, 
+        'Comarca':Comarca, 
+        'NomeParte':NomeParte, 
+        'EstadoCivil':EstadoCivil,
+        'Profissao':Profissao,
+        'Rg':Rg,
+        'OExp': OExp, 
+        'Cpf': Cpf,
+         'Email':Email,
+         'Endereco':Endereco,
+         'EndAdv': EndAdv,
+         'Acao':Acao,
+
+         'NomeReu': NomeReu,
+         'NacReu': NacReu,
+         'EstReu':   EstReu,
+         'ProReu':   ProReu,
+        'RgReu':  RgReu,
+        'OExpReu':  OExpReu,
+        'CpfReu':  CpfReu,
+        'EmailReu':  EmailReu,
+        'EndReu':  EndReu,
+        'Relato':  Relato,
+        'Fundamentos':  Fundamentos,
+        'Provas':  Provas,
+        'Valor':  Valor,
+        'Local':  Local,
+        'Dia':  Dia,
+        'Mes':  Mes,
+        'Ano':  Ano,
+        'Advogado':  Advogado,
+        'Oab':  Oab,
+        'Uf':  Uf
+    };
