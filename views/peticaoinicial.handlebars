@@ -1,3 +1,11 @@
+   <style>
+       .Peticao {
+           font-family: Arial, Helvetica, sans-serif;
+           font-size: 18px;
+       }
+   </style> 
+   <div class="Peticao">
+   
    {{#each dados}}
     <h1> MODELO DE PETIÇÃO INICIAL </h1> 
     <p>EXMO. SR. JUIZ. DE DIREITO DA. {{Vara}} DA COMARCA DE {{Comarca}}</i></p>
@@ -11,16 +19,18 @@
     <br> 
     <br> 
     <br> 
-    <p>{{NomeParte}}, {{Nacionalidade}}, {{EstadoCivil}}, {{Profissão}},portador da carteira de identidade de numero {{Rg}} expedida pelo {{OExp}}, 
-        inscrita no CPF/MF sob n°: {{Cpf}}, endereço eletrônico:{{Email}},residente e domiciliado {{Endereco}}, 
-        por seu advogado abaixo subscrito, com endereço profissional {{EndAdv}}, 
-        para fins do artigo 106, I do Novo Código de Processo Civil, vem a este juízo propor a presente</p>
+    <div align='right'>
+    <p>{{NomeParte}}, {{Nacionalidade}},  {{EstadoCivil}}, {{Profissao}},portador da carteira de identidade de número: {{Rg}}, expedida pelo órgão expedidor {{OExp}}, 
+        inscrita no CPF/MF sob n°: {{Cpf}}, endereço eletrônico: {{Email}},residente e domiciliado na {{Endereco}}, 
+        por seu advogado abaixo subscrito, com endereço profissional em {{EndAdv}}, 
+        para fins do artigo 106, I do Novo Código de Processo Civil, vem a este juízo propor a presente </p>
+        </div>
     <br>
-    <p>AÇÃO:{{Acao}}</p>
+    <p>AÇÃO: {{Acao}}</p>
     <br>
     <p>pelo rito comum, em face de {{NomeReu}}, {{NacReu}}, {{EstReu}}, 
-        {{ProReu}}, portador da carteira de identidade n° {{RgReu}},expedida pelo {{OExpReu}}, inscrita no CPF/MF sob n° {{CpfReu}} , endereço eletrônico {{EmailReu}} , 
-        residente e domiciliado {{EndReu}}, pelas razões de fato e de direito que passa a expor:</p>
+        {{ProReu}}, portador da carteira de identidade de n°: {{RgReu}},expedida pelo {{OExpReu}}, inscrita no CPF/MF sob n°: {{CpfReu}}, endereço eletrônico: {{EmailReu}}, 
+        residente e domiciliado na: {{EndReu}}, pelas razões de fato e de direito que passa a expor:</p>
     <br>
     <br>
     <p>DOS FATOS</p>
@@ -57,12 +67,11 @@ judiciais e honorários advocatícios na ordem de 20% sobre o valor da causa.</p
     <p>Pede deferimento</p>
     <p>{{Local}}, {{Dia}} de {{Mes}} de {{Ano}}</p>
     <br>
-    <hr></hr>
+    <p>_______________________</p>
     <p>{{Advogado}}, OAB:{{Oab}}, UF:{{Uf}}</p>
-
- <a href="/gerarpdf" onclick="PuxarUrl()"> Gerar Pdf </a>
 
 {{/each}}
 
+<a href="/gerarpdf" method='get' class='button'> Gerar Pdf </a>
 
-
+</div>

@@ -1,188 +1,179 @@
+<html>
+<title>Gerar Documento</title>
+
 <header>
     <div class = "Caixa">
         <img id= "Banner" src=""> 
             <h1>AutoDocs - Automatize a criação de documentos jurídicos</h1>
-</div>
-    <nav class = "menu">
-    <ul>
-        <li id = "Home"><a href="index.html">Home<a></li>
-        <li><a href ="http://localhost:8081/cad">Documentos</a></li>
-        <li><a href = "">Contato</a></li>
-        <li><a href ="">Quem Somos</a></li>
-    </ul>
+            </div>
+             <nav class = "menu">
+        <ul id='sidebar'>
+        <li ><a href="/">Home<a></li>
+        <li><a href ="/documentos">Documentos</a></li>
+        <li><a href = "/contato">Contato</a></li>
+        <li><a href ="/quemsomos">Quem Somos</a></li>
+        <li><a href ="/login">Login</a></li>
+         </ul>
     </nav>
 </header>
-<form name='form1' action="/add" method="get">
-                <h2>Tipo de documento: "Procuração Jurídica: Petição Inicial" </h2>
+<body>
+    <main>
 
-                    <div class = "Parte">
-                    <label for = "nVara">Número da Vara:</label>
-                    <input type ="text" name ="nVara" id ="nVara" class ="input-padrao"  placeholder="Numero da vara">
+        <h2>Tipo de documento: "Procuração Jurídica: Petição Inicial" </h1>
+        <form name='form1' action="/add" method="get">
 
-                    <label for = "comarca">Comarca:</label>
-                    <input type ="number" name ="comarca" id ="comarca" class ="input-padrao"  placeholder="Comarca">
-
-                    <label for = "nomeparte">Nome da parte:</label>
-                    <input type ="text" name ="nomeparte" id ="nomeparte" class ="input-padrao"  placeholder="Nome da Parte">
-
-                    <label for = "nacionalidade">Nacionalidade da parte: </label>
-                    <input type ="text" name ="nacionalidade" id ="nacionalidade" class ="input-padrao"  placeholder="Nacionalidade">
-
-                    <label for = "estadocivil">Estado Civil da parte: </label>
-                    <input type ="text" name ="estadocivil" id ="estadocivil" class ="input-padrao"  placeholder="Estado Civil">
-
-                    <label for = "profissao">Profissão da Parte: </label>
-                    <input type ="text" name ="profissao" id ="profissao" class ="input-padrao"  placeholder="Profissão">
-
+                    <div class = "box">
+                        <label for = "nVara">Vara:</label>
+                        <input type ="text" name ="nVara" style=" width: 80px " id ="nVara" class ="input-padrao"  placeholder="Numero da vara">
+                    </div>
+                            <div class = "box">
+                                <label for = "comarca">Comarca:</label>
+                                <input type ="number" style=" width: 80px" name ="comarca" id ="comarca" class ="input-padrao"  placeholder="Comarca">
+                            </div>
+                           
+                                <div class = "box">
+                                    <label for = "nomeparte">Nome:</label>
+                                    <input type ="text" name ="nomeparte" id ="nomeparte" class ="input-padrao"  placeholder="Nome da Parte">
+                                </div>
+                                    <div class = "box">
+                                        <label for = "nacionalidade">Nacionalidade: </label>
+                                        <input type ="text" name ="nacionalidade" style=" width: 120px" id ="nacionalidade" class ="input-padrao"  placeholder="Nacionalidade">
+                                    </div>
+                                        <div class = "box">
+                                                <label for = "estadocivil">Estado Civil: </label>
+                                                <input type ="text" style=" width: 100px" name ="estadocivil" id ="estadocivil" class ="input-padrao"  placeholder="Estado Civil">
+                                            </div>
+                                            <div class = "box">
+                    <label for = "profissao">Profissão: </label>
+                    <input type ="text" style=" width: 150px" name ="profissao" id ="profissao" class ="input-padrao"  placeholder="Profissão">
+</div>
+<div class = "box">
                     <label for = "rg">RG: </label>
                     <input type ="text" name ="rg" id ="rg" class ="input-padrao" placeholder="RG">
-
+</div>
+<div class = "box">
                     <label for = "orgaoexpedidor">Orgão expedidor: </label>
-                    <input type ="text" name ="orgaoexpedidor" id ="orgaoexpedidor" class ="input-padrao" placeholder="Orgão expedidor: ">
-
+                    <input type ="text" style=" width: 150px" name ="orgaoexpedidor" id ="orgaoexpedidor" class ="input-padrao" placeholder="Orgão expedidor: "></div>
+<div class = "box">
                     <label for = "CPF">CPF: </label>
-                    <input type = "number" name = "cpf" id ="cpf" class="input-padrao"  placeholder="000.000.000-xx">
-
+                    <input type = "number" style=" width: 200px" name = "cpf" id ="cpf" class="input-padrao"  placeholder="000.000.000-xx">
+                    </div>
+            <div class = "box">
                     <label for = "e-mail">E-Mail: </label>
-                    <input type = "text" name = "email" id ="e-mail" class="input-padrao" placeholder="xxx@yyy.com.br">
-
+                    <input type = "text" style="width: 360px;" name = "email" id ="e-mail" class="input-padrao" placeholder="xxx@yyy.com.br">
+</div>
+<div class = "box">
                     <label for = "endereco">Endereço: </label>
-                    <input type = "text" name = "endereco "id ="endereco" class="input-padrao"  placeholder="Rua.Aven...">
-
-                    <label for = "enderecoadvogado">Endereço comercial do Advogado da parte: </label>
-                    <input type = "text" name = "enderecoadvogado" id ="enderecoadvogado" class="input-padrao"  placeholder="Rua.Aven...">
-                    
-                    <label for = "acao">Descreva a Ação: </label>
-                    <input type ="text" name = "acao" id = "acao" class="input-padrao" placeholder="Descreva a ação contra o réu. "> 
-                   
+                    <input type = 'text' name = "endereco"style="width: 500px;" id ="endereco" class="input-padrao"  placeholder="Rua.Aven...">
+</div>
+<div class = "box">
+                    <label for = "enderecoadvogado">Endereço Advogado: </label>
+                    <input type = "text" name = "enderecoadvogado" style="width: 500px;" id ="enderecoadvogado" class="input-padrao"  placeholder="End. Comercial">
                     </div>
 
-                    <div class = "reu">
-
+                    <div class = 'boxtxt'>
+                    <label id ="labelacao" for = "acao">Descreva a Ação: </label>
+                    <textarea type ="text" name = "acao" id = "acao" class="input-padrao" rows="2"  placeholder="Descreva a ação contra o réu. "></textarea> 
+                   </div>
+                   
+<div class = 'box'>
                     <label for = "nomereu">Nome do Réu:</label>
-                    <input type ="text" name ="nomereu" id ="nomereu" class ="input-padrao"  placeholder="Nome do Reu">
-
+                    <input type ="text" name ="nomereu" cols="5" id ="nomereu" class ="input-padrao"  placeholder="Nome do Reu">
+</div>
+<div class = 'box'>
                     <label for = "nacionalidadereu">Nacionalidade do Réu: </label>
-                    <input type ="text" name ="nacionalidadereu" id ="nacionalidadereu" class ="input-padrao" placeholder="Nacionalidade do réu">
-
+                    <input type ="text" name ="nacionalidadereu" style=" width: 180px" id ="nacionalidadereu" class ="input-padrao" placeholder="Nacionalidade do réu">
+</div>
+<div class = 'box'>
                     <label for = "estadocivilreu">Estado Civil do Réu: </label>
                     <input type ="text" name ="estadocivilreu" id ="estadocivilreu" class ="input-padrao"  placeholder="Estado Civil do reu">
-
+</div>
+<div class = 'box'>
                     <label for = "profissaoreu">Profissão do Réu: </label>
-                    <input type ="text" name ="profissaoreu" id ="profissaoreu" class ="input-padrao"  placeholder="Profissão do Réu: ">
-
+                    <input type ="text" style=" width: 150px" name ="profissaoreu" id ="profissaoreu" class ="input-padrao"  placeholder="Profissão do Réu: ">
+ </div>
+ 
+<div class = 'box'>
                     <label for = "rgreu">RG: </label>
                     <input type ="text" name ="rgreu" id ="rgreu" class ="input-padrao" placeholder="RG do réu">
-
+</div>
+<div class = 'box'>
                     <label for = "orgaoexpedidorreu">Orgão expedidor: </label>
-                    <input type ="text" name ="orgaoexpedidorreu" id ="orgaoexpedidorreu" class ="input-padrao" placeholder="Orgão expedidor do réu: ">
-
+                    <input type ="text" style="width: 100px" name ="orgaoexpedidorreu" id ="orgaoexpedidorreu" class ="input-padrao" placeholder="Orgão expedidor do réu: ">
+</div>
+<div class = 'box'>
                     <label for = "CPFreu">CPF: </label>
-                    <input type = "number" name = "cpfreu" id ="cpfreu" class="input-padrao" placeholder="000.000.000-xx">
-
+                    <input type = "number" style="width: 200px" name = "cpfreu" id ="cpfreu" class="input-padrao" placeholder="000.000.000-xx">
+</div>
+<div class = 'box'>
                     <label for = "e-mailreu">E-Mail: </label>
                     <input type = "text" name = "emailreu" id ="emailreu" class="input-padrao" placeholder="xxx@yyy.com.br">
-
+</div>
+<div class = 'box'>
                     <label for = "enderecoreu">Endereço: </label>
-                    <input type = "text" name = "enderecoreu"id ="enderecoreu" class="input-padrao" placeholder="Rua.Aven...">
-                        
+                    <input type = "text"  style="width: 500px;" name = "enderecoreu"id ="enderecoreu" class="input-padrao" placeholder="Rua.Aven...">
+</div>
+                  <div class = 'boxtxt'>      
                     <label for = "relato">Relato: </label>
-                    <input type = "text" name = "relato" id ="relato" class="input-padrao" placeholder="Relato da ação: ">
+                    <textarea  cols="35" rows="8" name = "relato" id ="relato" class="input-padrao" placeholder="O tópico dos relatos é o de maior importância na petição, descrevendo com clareza e objetividade tudo aquilo que ocorreu, de forma que esteja relacionado aos fundamentos jurídicos do pedido.
 
+Se o caso é rico em detalhes, uma opção é separar essas minúcias em uma tabela, por exemplo, a fim de direcionar a leitura e facilitar a localização das informações.
+
+Relatar os acontecimentos em ordem cronológica "></textarea>
+</div>
+<div class = 'boxtxt'>
                     <label for = "fundamentos">Fundamentos: </label>
-                    <input type = "text" name = "fundamentos" id ="fundamentos" class="input-padrao"  placeholder="Fundamentos da ação: ">
-
+                    <textarea  rows="8" name = "fundamentos" style="width: 100%;" id ="fundamentos" class="input-padrao"  placeholder="Exemplo: Nesse sentido, jurisprudência deste E. Tribunal de Justiça, cuja ementa ora é transcrita:
+                    Ação sumária. Acidente de trânsito. Responsabilidade Civil. Legitimidade. Não há responsabilidade solidária do cônjuge ou companheiro quanto aos danos causados pelo outro cônjuge ou convivente. Ainda que o fosse, 
+                    só responderia o proprietário se tivesse entregue o veículo a quem não estava habilitado ou sem condições para dirigi-lo. Desprovimento do apelo. 
+                    (Apelação Cível 10005/98, 10a. CCTJERJ, Rel. Des. Sylvio Capanema)
+                    "></textarea>
+</div>
+<div class = 'boxtxt'>
                     <label for = "provas">Provas: </label>
-                    <input type = "text" name = "provas" id ="provas" class="input-padrao" placeholder="Provas : ">
-
+                    <textarea  rows="8" name = "provas" id ="provas"  class="input-padrao" placeholder="Requer a produção de todas as provas em direito admitidas, na amplitude dos artigos 369 e seguintes do NCPC, em especial a prova documental, a prova pericial, a testemunhal e o depoimento pessoal do Réu. "></textarea>
+</div>
+<div class = 'box'>
                     <label for = "valor">Valor da ação: </label>
-                    <input type = "number" name = "valor" id ="valor" class="input-padrao" placeholder="Valor da ação: ">
-
+                    <input type = "number" style=" width: 200px" name = "valor" id ="valor" class="input-padrao" placeholder="Valor da ação: ">
+</div>
+<div class = 'box'>
                     <label for = "local">Local: </label>
                     <input type = "text" name = "local" id ="local" class="input-padrao" placeholder="Local:">
-
+</div>
+<div class = 'box'>
                     <label for = "dia"> Dia: </label>
-                    <input type = "number" name = "dia" id ="dia" class="input-padrao" placeholder="Dia: ">
-
+                    <input type = "number" style=" width: 100px" name = "dia" id ="dia" class="input-padrao" placeholder="Dia: ">
+</div>
+<div class = 'box'>
                     <label for = "mes">Mês: </label>
-                    <input type = "text" name = "mes" id ="mes" class="input-padrao" placeholder="Mês: ">
-
+                    <input type = "text" style=" width: 100px" name = "mes" id ="mes" class="input-padrao" placeholder="Mês: ">
+</div>
+<div class = 'box'>
                     <label for = "ano:">Ano: </label>
-                    <input type = "number" name = "ano" id ="ano" class="input-padrao" placeholder="Ano: ">
-
+                    <input type = "number" style=" width: 100px" name = "ano" id ="ano" class="input-padrao" placeholder="Ano: ">
+</div>
+<div class = 'box'>
                     <label for = "advogado">Nome do Advogado: </label>
                     <input type = "text" name = "advogado" id ="advogado" class="input-padrao" placeholder="Nome do advogado: ">
-
+</div>
+<div class = 'box'>
                     <label for = "oab">OAB: </label>
-                    <input type = "number" name = "oab" id ="oab" class="input-padrao"  placeholder="N° OAB ">
-
+                    <input type = "number" style=" width: 100px" name = "oab" id ="oab" class="input-padrao"  placeholder="N° OAB ">
+</div>
+<div class = 'box'>
                     <label for = "uf">UF OAB: </label>
-                    <input type = "text" name = "uf" id ="uf" class="input-padrao"  placeholder="UF OAB "> 
-                        
-
-                    <input type="submit" id="send" value="Gerar documento PDF" class = "Enviar"> 
-                    
+                    <input type = "text" style=" width: 100px" name = "uf" id ="uf" class="input-padrao"  placeholder="UF OAB "> 
+</div>
+                  <div class ="box">
+                    <input type="submit" id="send" onclick="criarpdf(url)" value="Gerar documento PDF" class = "Enviar"> 
+                    </div>            
         </form>
-
-<div id = "modelopeticao">
-    <h1> MODELO DE PETIÇÃO INICIAL </h1> 
-    <p>EXMO. SR. JUIZ. DE DIREITO DA. <i id="campovara"></i> DA COMARCA DE <i id="campocomarca"></i></p>
-    </div> 
-    {{!-- <p></p>  
-    <p></p> 
-    <p></p> 
-    <p></p> 
-    <p></p> 
-    <p></p> 
-    <p></p> 
-    <p></p> 
-    <p></p> 
-    <p></p> 
-    <p><i id="camponome"></i>, <i id="camponacionalidade">, <i id="camponacionalidade"></i>, <i id="campoestadocivil"></i>, <i id="campoprofissao"></i>,portador da carteira de identidade de numero <i id="camporg"> </i>expedida pelo <i id="campoexpedicao"></i>, 
-        inscrita no CPF/MF sob n°: <i id="campocpf"></i>, endereço eletrônico: <i id="campoemail"></i>,residente e domiciliado na <i id="campoendereco"></i>, 
-        por seu advogado abaixo subscrito, com endereço profissional <i id="campoenderecoadvogado"></i>, 
-        para fins do artigo 106, I do Novo Código de Processo Civil, vem a este juízo propor a presente </p>
-    <p></p>
-    <p>AÇÃO <i id="campoacao"></i></p>
-    <p></p>
-    <p>pelo rito comum, em face de<i id="camponomereu"></i>, <i id="camponacionalidadereu"></i>, <i id="campoestadocivilreu"></i>, 
-        <i id="campoprofissaoreu"></i>, portador da carteira de identidade n° <i id="camporgreu"></i>,expedida pelo <i id="campoexpedicaoreu"></i>, inscrita no CPF/MF sob <i id="campocpfreu"></i> , endereço eletrônico <i id="campoemailreu"></i> , 
-        residente e domiciliado <i id="campoenderecoreu"></i>, pelas razões de fato e de direito que passa a expor:</p>
-    <p></p>
-    <p></p>
-    <p>DOS FATOS</p>
-    <p><i id="camporelatoreu"></i></p>
-    <p></p>
-    <p></p>
-    <p>DOS FUNDAMENTOS</p>
-    <p></p>
-    <p><i id="campofundamentos"></i></p>
-    <p></p>
-    <p></p>
-    <p>DO PEDIDO</p>
-    <p>diante do exposto requerer a V.Excelência: </p>
-    <p></p>
-    <p>1 – Que seja designada audiência de conciliação ou mediação na forma do previsto no artigo
-    334 do NCPC;</p>
-    <p>2 – A citação do Réu para oferecer resposta no prazo legal sob pena de preclusão, revelia e
-    confissão.</p>
-    <p>3 – que seja julgado procedente o pedido para ……….</p>
-    <p>4 – que seja julgado procedente o pedido para condenar o réu ao pagamento das custas
-    judiciais e honorários advocatícios na ordem de 20% sobre o valor da causa.</p>
-    <p></p>
-    <p></p>
-    <p>DAS PROVAS</p>
-    <p><i id="campoprovas"></i></p>
-    <p></p>
-    <p></p>
-    <p>DO VALOR DA CAUSA</p>
-    <p></p>
-    <p></p>
-    <p>Dá se a causa o valor de R$ <i id="campovalor"></i></p>
-    <p>Nesses termos,</p>
-    <p></p>
-    <p>Pede deferimento</p>
-    <p><i id="campolocal"></i>, <i id="campodia"></i>de <i id="campomes"></i> de <i id="campovano"></i></p>
-    <p></p>
-    <hr></hr>
-    <p><i id="camponomeadvogado"></i>, OAB <i id="campooab"></i>, UF <i id="campouf"></i></p> --}}
+    </main>
+ <section class = 'rodape'>
+<footer>
+    <h1> &#169; Copyright Auto-Docs 2022</h1>
+</footer>
+ </section>
+</body>
+</html>

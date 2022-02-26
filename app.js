@@ -5,21 +5,16 @@ const path = require('path');
 const Handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
 const { engine } = require ('express-handlebars');
-const pdf = require('html-pdf'); 
 const { response, Router } = require('express');
 const { render } = require('express/lib/response');
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 const fetch = require('node-fetch'); 
-const pdfcontroller = require('./controller/pdfcontroller');
 const { route } = require('express/lib/application');
 const req = require('express/lib/request');
 const router = express.Router();
 
-
-
-
-
+//Função do puppeteers PDF;
 async function  criarpdf(url) {
     let navegador = await puppeteer.launch(); 
 
@@ -33,51 +28,46 @@ async function  criarpdf(url) {
         printBackground: true,
         format: "Letter",
         margin: {
-            top: "20px",
-            bottom: "40px",
-            left: "20px",
-            right: "20px"
+            top: "80px",
+            bottom: "100px",
+            left: "100px",
+            right: "100px"
         }
     });
-
-
-    navegador.close(); 
-
-    return pdf; 
-
-
+ navegador.close(); 
+ return pdf; 
     
 }
 
-
-
-//Body Parser 
+//Body Parser; 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-// //Template engine HandleBars
+// //Template engine HandleBars;
 app.engine('Handlebars', engine({defaultLayout:'main'}));
 app.set("view engine", 'Handlebars'); 
 
-// //Routes and Templates 
-// router.post('/pdf', pdfcontroller.factura); 
+//Tela inicial;
+app.get('/', function(req,res) {
+    res.render('index');
+});
 
-
-//Tela inicial
-// app.get('/', function(req,res) {
-//     res.render('index');
-// });
-
-
-//Formulário Inserir
-app.get('/',function(req, res) {
+//Página do Formulário;
+app.get('/documentos',function(req, res) {
     res.render("inserir"); 
 });
 
-//Puxar Variaveis e Armazenar no Pdf.Handlebars
+app.get('/contato',function(req, res) {
+    res.render("contato"); 
+});
+
+app.get('/quemsomos',function(req, res) {
+    res.render("quemsomos"); 
+});
+
+//Trazer Variaveis e Armazenar no Pdf.Handlebars e na URL;
 app.get('/add', function(req, res){
 
-    
                 let peticao = [{
                     
                         Vara: req.query.nVara,
@@ -115,60 +105,33 @@ app.get('/add', function(req, res){
                         Oab: req.query.oab, 
                         Uf: req.query.uf
                 
-                }]        
-                     res.render('pdf', {dados: peticao});
-                    
-                
-                                                      
-                //     var html = template(Dados);  
+                }] 
+                        res.render('peticaoinicial', {dados: peticao})
+                        
+                        
+                        url = `http://localhost:8081/add?nVara=${req.query.nVara}&comarca=${req.query.comarca}
+                        &nomeparte=${req.query.nomeparte}&nacionalidade=${req.query.nacionalidade}
+                        &estadocivil=${req.query.estadocivil}&profissao=${req.query.profissao}&rg=${req.query.rg}
+                        &orgaoexpedidor=${req.query.orgaoexpedidor}&cpf=${req.query.cpf}&email=${req.query.email}
+                        &endereco=${req.query.endereco}&enderecoadvogado=${req.query.enderecoadvogado}
+                        &acao=${req.query.acao}&nomereu=${req.query.nomereu}&nacionalidadereu=${req.query.nacionalidadereu}
+                        &estadocivilreu=${req.query.estadocivilreu}&profissaoreu=${req.query.profissaoreu}
+                        &rgreu=${req.query.rgreu}&orgaoexpedidorreu=${req.query.orgaoexpedidorreu}
+                        &cpfreu=${req.query.cpfreu}&emailreu=${req.query.emailreu}&enderecoreu=${req.query.enderecoreu}
+                        &relato=${req.query.relato}&fundamentos=${req.query.fundamentos}&provas=${req.query.provas}
+                        &valor=${req.query.valor}&local=${req.query.local}&dia=${req.query.dia}&mes=${req.query.mes}
+                        &ano=${req.query.ano}&advogado=${req.query.advogado}&oab=${req.query.oab}&uf=${req.query.uf}`
 
-                //     var milis = new Date(); 
-                //     milis = milis.getTime(); 
 
-                //     var pdfPath = path.join('pdf', 'Vara.pdf');
-
-                //     var options = {
-                //         width: '1230px',
-                //         headerTemplate: "<p></p>",
-                //         footerTemplate: "<p></p>",
-                //         displayHeaderFooter: false,
-                //         margin: {
-                //             top: "10px",
-                //             bottom: "30px"
-                //         },
-                //         printBackground: true,
-                //         path: pdfPath
-                //     }
-
-                //     const browser = await puppeteer.launch({
-                //         headless:true
-                //     }
-                //     );
-
-                //     var page = await browser.newPage();
-
-                //     await page.goto('localhost:8081' , {
-                //         waitUntil: 'networkidle0'
-                //     });
-
-                //     const pdf = await page.pdf(options);
-
-                //     response.contentType("application/pdf"); 
-                //     await browser.close(); 
-                    
-                //     return res.send(pdf);           
 });
 
-var paginaAnterior = document.referrer;
-app.get('/gerarpdf', async(req,res) => { 
-       
-        let pdf = await criarpdf(paginaAnterior);
-
+// Rota do Botão de gerar o PDF               
+app.get('/gerarpdf', async function(req,res){ 
+        let pdf = await criarpdf(url); 
         res.contentType('application/pdf');
         res.send(pdf); 
 });
-    
-     
+        
 //Estilos
 app.get("/style",function(req, res){
     res.sendFile(__dirname+ '/public/css/style.css');
@@ -179,7 +142,7 @@ app.get("/javascript",function(req, res){
 
 });
 
-//Start Server
+// Start Server
 app.listen(8081, function() {
     console.log("Servidor Rodando na url http://localhost:8081");
 });

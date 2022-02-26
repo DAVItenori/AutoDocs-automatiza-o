@@ -1,8 +1,4 @@
-module.exports (
-function PuxarUrl() {
-   const url = window.location.href; 
-}
-)
+
 
 
 
